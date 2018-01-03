@@ -1,6 +1,8 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://cdn.rawgit.com/datejs/datejs/master/build/date-en-US.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
 <script src="assets/index.js"></script>
 <script>
   $( function() {
@@ -62,10 +64,11 @@
         if (isSignedIn) {
           authorizeButton.style.display = 'none';
           signoutButton.style.display = 'block';
-          listUpcomingEvents();
+          appendPre("You are signed in.")
         } else {
           authorizeButton.style.display = 'block';
           signoutButton.style.display = 'none';
+          appendPre("Authorize this app using the button above.")
         }
       }
 
@@ -118,8 +121,25 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
   <h1>Add your classes to google calendar</h1>
+  <p style="width: 500px;">1. Go to my.uchicago.edu and log in. Copy your course schedule as shown below.
+    <img src="/img/classes.png" style="width: 100%;" />
+  </p>
+  <p>2. Paste your schedule in the textbox below.</p>
   <textarea name="message" rows="10" cols="30"></textarea>
   <br>
-  <p style="margin: 0;">Select the first day of the quarter.</p><input style="display: block;" type="text" id="datepicker">
+  <p style="margin: 0;">3. Enter the date of the Monday of the first week of the quarter.</p><input style="display: block;" type="text" id="datepicker" placeholder="Click to see calendar." />
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <p>4. Click "Add to Calendar"</p>
   <button onclick="addToCalendar()">Add to Calendar</button>
 </html>
