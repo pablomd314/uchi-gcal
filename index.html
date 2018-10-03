@@ -10,7 +10,30 @@
   } );
 </script>
 <html>
-    <script type="text/javascript">
+    
+  <h1>Add your classes to google calendar</h1>
+  0. <button id="authorize-button" style="display: none;">Authorize</button>
+    <button id="signout-button" style="display: none;">Sign Out</button>
+
+    <pre id="content"></pre>
+  <p style="width: 500px;">1. Go to my.uchicago.edu and log in. Copy your course schedule as shown below.
+    <img src="img/classes.png" style="width: 100%;" />
+  </p>
+  <p>2. Paste your schedule in the textbox below.</p>
+  <textarea name="message" rows="10" cols="30"></textarea>
+  <br>
+  <p style="margin: 0;">3. Enter the date of the Monday of the first week of the quarter.</p><input style="display: block;" type="text" id="datepicker" placeholder="Click to see calendar." />
+  <br>
+
+  <br><br><br>
+  <br><br>
+  <br>
+  <br><br>
+  <br><br><br>
+
+  <p>4. Click "Add to Calendar"</p>
+  <button onclick="addToCalendar()">Add to Calendar</button>
+  <script type="text/javascript">
       // Client ID and API key from the Developer Console
       var CLIENT_ID = '984010707404-s23bfosb226866h9iaus4np5c33qrn5k.apps.googleusercontent.com';
 
@@ -115,26 +138,4 @@
       onload="this.onload=function(){};handleClientLoad()"
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
-  <h1>Add your classes to google calendar</h1>
-  0. <button id="authorize-button" style="display: none;">Authorize</button>
-    <button id="signout-button" style="display: none;">Sign Out</button>
-
-    <pre id="content"></pre>
-  <p style="width: 500px;">1. Go to my.uchicago.edu and log in. Copy your course schedule as shown below.
-    <img src="img/classes.png" style="width: 100%;" />
-  </p>
-  <p>2. Paste your schedule in the textbox below.</p>
-  <textarea name="message" rows="10" cols="30"></textarea>
-  <br>
-  <p style="margin: 0;">3. Enter the date of the Monday of the first week of the quarter.</p><input style="display: block;" type="text" id="datepicker" placeholder="Click to see calendar." />
-  <br>
-
-  <br><br><br>
-  <br><br>
-  <br>
-  <br><br>
-  <br><br><br>
-
-  <p>4. Click "Add to Calendar"</p>
-  <button onclick="addToCalendar()">Add to Calendar</button>
 </html>
