@@ -10,11 +10,6 @@
   } );
 </script>
 <html>
-<button id="authorize-button" style="display: none;">Authorize</button>
-    <button id="signout-button" style="display: none;">Sign Out</button>
-
-    <pre id="content"></pre>
-
     <script type="text/javascript">
       // Client ID and API key from the Developer Console
       var CLIENT_ID = '984010707404-s23bfosb226866h9iaus4np5c33qrn5k.apps.googleusercontent.com';
@@ -121,6 +116,10 @@
       onreadystatechange="if (this.readyState === 'complete') this.onload()">
     </script>
   <h1>Add your classes to google calendar</h1>
+  0. <button id="authorize-button" style="display: none;">Authorize</button>
+    <button id="signout-button" style="display: none;">Sign Out</button>
+
+    <pre id="content"></pre>
   <p style="width: 500px;">1. Go to my.uchicago.edu and log in. Copy your course schedule as shown below.
     <img src="img/classes.png" style="width: 100%;" />
   </p>
